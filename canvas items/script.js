@@ -52,22 +52,70 @@ const c = canvas.getContext('2d');
 // }
 
 
-var x = 200; // создаем переменную для анимации
-var dx = 10; // создаем переменную для изменения скорости
-var radius = 40; // создаем переменную для радиуса, он необходим для того чтобы 
+
+// ------------------------------- Multiply circle --------------------------------
+
+function Circle(x, y, dx, dy, radius) {
+    this.x = x;
+    this.y = x;
+    this.dx = dx;
+    this.dy = dy;
+    this.radius = radius;
+
+    this.draw = function() {
+        c.beginPath();
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false); 
+        c.strokeStyle = 'red';
+        c.stroke();
+        c.fill();
+    }
+
+    // Используем this для обращения к переменным внутри функции
+    this.update = function() {
+        if (this.x + this.radius > innerWidth || this.x - this.radius < 0)  { // Эта запись позволяет фигуре не вылезти за пределы окна
+            this.dx = -this.dx;
+        }
+    
+        if (this.y + this.radius > innerHeight || this.y - this.radius < 0)  { // Эта запись позволяет фигуре не вылезти за пределы окна
+            this.dy = -this.dy;
+        }
+    
+        this.x += this.dx; // увеличиваем переменную, создавая анимацию
+        this.y += this.dy;
+        
+        this.draw();
+    }
+}
+
+var circleArray = [];
+var cirlce = new Circle(x, y, dx, dy, radius);
+
+for (var i = 0; i < 100; i++) {
+    var radius = 30; // создаем переменную для радиуса
+    var x = Math.random() * (innerWidth - radius * 2) + radius; // создаем переменную для анимации ось x, так же прибавляем радиус для того чтобы фигура не застревала в углу экрана
+    var y = Math.random() * (innerHeight - radius * 2) + radius; // создаем переменную для анимации ось y
+    var dx = (Math.random() - 0.5) * 3; // создаем переменную для изменения скорости оси x
+    var dy = (Math.random() - 0.5) * 3; // создаем переменную для изменения скорости оси y
+    circleArray.push(new Circle(x, y, dx, dy, radius));
+    // var cirlce = new Circle(200, 200, 3, 3, 39);
+}
+
+cirlce.draw();
+
+console.log(circleArray);
+
+// ------------------------------- Animate circle --------------------------------
+
 function animate() { // функция для создания анимации
     requestAnimationFrame(animate);
-    c.clearRect(0, 0, innerWidth, innerHeight); // Эта строка убирает фигуры, после воспроизведения анимации
-    
-    c.beginPath(); // Создаем один круг для дальнейшей анимации
-    c.arc(x, 200, radius, 0, Math.PI * 2, false); 
-    c.strokeStyle = 'blue';
-    c.stroke();
+    // c.clearRect(0, 0, innerWidth, innerHeight); // Эта строка убирает фигуры, после воспроизведения анимации
 
-    if (x + radius> innerWidth || x - radius < 0)  { // Эта запись позволяет фигуре 
-        dx = -dx;
+    for (var i = 0; i < circleArray.length; i++) {
+        circleArray[i].update(); // создаем функцию обновления
     }
-    x += dx; // увеличиваем переменную, создавая анимацию
+    
 }
 // Анимация, по своей сути являет собой постоянно обновляющуюся старницу, благодаря чему элементы могут двигаться
 animate();
+
+
