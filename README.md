@@ -8,3 +8,7 @@ This is what i've done:
 
 https://github.com/Kuldik/canvas_project/assets/112172212/b4ef34cf-94ff-446a-9531-330ee9f2934a
 
+2nd item
+
+https://github.com/Kuldik/canvas_project/assets/112172212/274613c1-80b8-4e0d-9418-d270afd5466e
+
