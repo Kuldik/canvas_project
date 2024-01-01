@@ -90,7 +90,7 @@ function Circle(x, y, dx, dy, radius) {
 var circleArray = [];
 var cirlce = new Circle(x, y, dx, dy, radius);
 
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 140; i++) {
     var radius = 30; // создаем переменную для радиуса
     var x = Math.random() * (innerWidth - radius * 2) + radius; // создаем переменную для анимации ось x, так же прибавляем радиус для того чтобы фигура не застревала в углу экрана
     var y = Math.random() * (innerHeight - radius * 2) + radius; // создаем переменную для анимации ось y
