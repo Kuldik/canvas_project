@@ -23,6 +23,8 @@ https://github.com/Kuldik/canvas_project/assets/112172212/a5e3a6e8-5635-4079-a9d
 Sine Waves
 
 https://github.com/Kuldik/canvas_project/assets/112172212/a22d4c95-1b27-4e37-a64b-12423902eb98
+
 https://github.com/Kuldik/canvas_project/assets/112172212/df231a6f-adff-4aca-b371-d916488b0623
+
 https://github.com/Kuldik/canvas_project/assets/112172212/16468c25-7e96-4108-82df-a7bc5370d740
 
