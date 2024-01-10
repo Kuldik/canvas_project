@@ -16,3 +16,7 @@ Gravity
 
 https://github.com/Kuldik/canvas_project/assets/112172212/bc79b19c-09a3-4e04-953f-a959500ecfbc
 
+Circular Motion
+
+https://github.com/Kuldik/canvas_project/assets/112172212/a5e3a6e8-5635-4079-a9d2-c19042edaa96
+
