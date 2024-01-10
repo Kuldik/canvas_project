@@ -28,3 +28,8 @@ https://github.com/Kuldik/canvas_project/assets/112172212/df231a6f-adff-4aca-b37
 
 https://github.com/Kuldik/canvas_project/assets/112172212/16468c25-7e96-4108-82df-a7bc5370d740
 
+Fireworks
+
+
+https://github.com/Kuldik/canvas_project/assets/112172212/6313179e-2299-4ccc-910f-3bd5321b2f9b
+
